@@ -1,25 +1,29 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Blog – Daniel Stewart</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
-		<header>
-			<h1>My Finance + Tech + Whatever Blog</h1>
-			<p>Sharing a little bit of this & a little bit of that. Whatever I feel the need to write about.</p>
-			<nav><a href="index.html">← Back to Home</a></nav>
-		</header>
-		<section>
-			<article>
-				<h2>Welcome Post Coming Soon!</h2>
-				<p>This blog will explore my projects, lessons, and ideas around data science, investing, and machine learning.</p>
-			</article>
-		</section>
-		<footer>
-			<span class="copyright">&copy; 2025 Daniel Stewart | All Rights Reserved.</span>
-		</footer>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog – Daniel Stewart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="bg"></div>
+    <div id="overlay"></div>
+    <div id="main">
+      <header id="header">
+        <h1>My Blog</h1>
+        <p>Sharing lessons from my journey into data science and finance</p>
+        <nav><a href="index.html">← Back to Home</a></nav>
+      </header>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function () { document.body.classList.remove('is-preload'); }
+    window.ontouchmove = function () { return false; }
+    window.onorientationchange = function () { document.body.scrollTop = 0; }
+  </script>
+</body>
 </html>
+
