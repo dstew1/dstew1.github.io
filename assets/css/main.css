@@ -1073,3 +1073,10 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+body.blog #main {
+  position: relative;
+  height: auto;
+  padding: 4em 1.5em;
+  text-align: left;
+}
