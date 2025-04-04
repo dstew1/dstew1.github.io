@@ -4,63 +4,117 @@
   <meta charset="UTF-8">
   <title>Blog – Daniel Stewart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/main.css">
-  
   <style>
-    body.blog #wrapper,
-    body.blog #main {
-      position: relative !important;
-      height: auto !important;
-      overflow: visible !important;
+    body {
+      background: #fff;
+      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
     }
-  
-    body.blog {
-      overflow: auto !important;
+
+    header {
+      padding: 2em 1.5em;
+      border-bottom: 1px solid #e0e0e0;
+      background: #f9f9f9;
+    }
+
+    header h1 {
+      margin: 0 0 0.3em;
+      font-size: 2.2em;
+    }
+
+    header p {
+      margin: 0 0 1em;
+      color: #555;
+    }
+
+    header nav a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #blog-list {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 0 1.5em;
+    }
+
+    article {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5em;
+      margin-bottom: 2.5em;
+      align-items: flex-start;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 2em;
+    }
+
+    article img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    article h3 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+
+    article a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    article a:hover {
+      text-decoration: underline;
+    }
+
+    article p {
+      margin: 0;
+      color: #444;
+    }
+
+    @media (max-width: 700px) {
+      article {
+        flex-direction: column;
+      }
+
+      article img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
-<body class="is-preload blog">
-  <div id="wrapper">
-    <div id="bg"></div>
-    <div id="overlay"></div>
-    <div id="main">
-      
-      <header id="header">
-        <h1>My Finance + Tech + Whatever Blog</h1>
-        <p>Sharing a little bit of this & a little bit of that. Whatever I feel the need to write about.</p>
-        <nav><a href="index.html">← Back to Home</a></nav>
-      </header>
-    
-      <section id="blog-list" style="padding: 2em; text-align: left; background-color: #111; color: #fff; opacity: 1; position: relative; z-index: 10;">
-        <h2 style="color: #fff; margin-bottom: 1em;">📝 Blog Posts</h2>
-      
-        <!-- Blog Post 1 -->
-        <article style="display: flex; gap: 1em; margin-bottom: 2em;">
-          <img src="assets/images/Demo-Thumb.png" alt="Post Image" style="width: 200px; height: auto; border-radius: 12px;" />
-          <div>
-            <h3 style="margin-bottom: 0.3em;"><a href="posts/predicting-returns.html" style="color: #fff;">Predicting Stock Returns with Python</a></h3>
-            <p style="opacity: 0.8;">Built a regression model using historical market data and backtested the results. Walkthrough + GitHub link included.</p>
-          </div>
-        </article>
+<body>
+  <header>
+    <h1>My Finance + Tech + Whatever Blog</h1>
+    <p>Sharing a little bit of this & a little bit of that. Whatever I feel the need to write about.</p>
+    <nav><a href="index.html">← Back to Home</a></nav>
+  </header>
 
-        <!-- Blog Post 2
-        <article style="display: flex; gap: 1em; margin-bottom: 2em;">
-          <img src="assets/images/post2-thumb.jpg" alt="Post Image" style="width: 200px; height: auto; border-radius: 12px;" />
-          <div>
-            <h3 style="margin-bottom: 0.3em;"><a href="posts/portfolio-optimizer.html" style="color: #fff;">Building a Portfolio Optimizer</a></h3>
-            <p style="opacity: 0.8;">A project using Modern Portfolio Theory and Python to optimize risk-adjusted returns. Includes visualization and open-source repo.</p>
-          </div>
-        </article> -->
-      </section>
- 
-    </div>
-  </div>
+  <section id="blog-list">
+    <!-- Blog Post 1 -->
+    <article>
+      <img src="assets/images/Demo-Thumb.png" alt="Post Image" />
+      <div>
+        <h3><a href="posts/predicting-returns.html">Predicting Stock Returns with Python</a></h3>
+        <p>Built a regression model using historical market data and backtested the results. Walkthrough + GitHub link included.</p>
+      </div>
+    </article>
 
-  <script>
-    window.onload = function () { document.body.classList.remove('is-preload'); }
-    window.ontouchmove = function () { return false; }
-    window.onorientationchange = function () { document.body.scrollTop = 0; }
-  </script>
+    <!-- Blog Post 2 -->
+    <!--
+    <article>
+      <img src="assets/images/post2-thumb.jpg" alt="Post Image" />
+      <div>
+        <h3><a href="posts/portfolio-optimizer.html">Building a Portfolio Optimizer</a></h3>
+        <p>A project using Modern Portfolio Theory and Python to optimize risk-adjusted returns. Includes visualization and open-source repo.</p>
+      </div>
+    </article>
+    -->
+  </section>
 </body>
 </html>
-
