@@ -1,118 +1,47 @@
 <!DOCTYPE HTML>
+
 <html>
 	<head>
-	  <title>Trying New Things</title>
-	  <meta charset="utf-8" />
-	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	  <link rel="stylesheet" href="assets/css/main.css" />
-	  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	  <style>
-	    #book-promo {
-	      position: relative;
-	      height: 150vh;
-	      background: #fff;
-	      overflow-x: hidden;
-	      padding: 4em 1.5em;
-	    }
-	    #book-image {
-	      position: sticky;
-	      top: 30%;
-	      width: 200px;
-	      transform: translateX(100vw);
-	      transition: transform 0.3s ease-out;
-	    }
-	    #book-description {
-	      opacity: 0;
-	      text-align: center;
-	      max-width: 600px;
-	      margin: 2em auto;
-	      transition: opacity 1s ease-in;
-	    }
-	    #book-description h2 {
-	      font-size: 2em;
-	    }
-	    #book-description p {
-	      font-size: 1.2em;
-	      line-height: 1.6em;
-	    }
-	    #book-description a {
-	      display: inline-block;
-	      margin-top: 1em;
-	      padding: 0.75em 1.5em;
-	      background: #007acc;
-	      color: white;
-	      border-radius: 5px;
-	      text-decoration: none;
-	      font-weight: bold;
-	    }
-	  </style>
+		<title>Trying New Things</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-	  <div id="wrapper">
-	    <div id="bg"></div>
-	    <div id="overlay"></div>
-	    <div id="main">
-	
-	      <!-- Header -->
-	      <header id="header">
-	        <h1>Daniel Stewart</h1>
-	        <p>Tech Entrepreneur &nbsp;&bull;&nbsp; Python & Machine/Deep Learning &nbsp;&bull;&nbsp; Data-Driven Investing Enthusiast</p>
-	        <p>Vancouver, Canada</p>
-	        <nav>
-	          <ul>
-	            <li><a href="blog.html" class="icon solid fa-pen"><span class="label">Blog</span></a></li>
-	            <li><a href="https://www.linkedin.com/in/danthemans/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-	            <li><a href="https://github.com/dstew1" class="icon brands fa-github"><span class="label">Github</span></a></li>
-	            <li><a href="mailto:daniel.stewarrt@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-	            <li><a href="https://www.youtube.com/@explorerpreneur" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-	            <li><a href="https://www.instagram.com/explorerpreneur" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-	          </ul>
-	        </nav>
-	      </header>
-	
-	    </div> <!-- end of #main -->
-	
-	    <!-- Book Promo Section -->
-	    <section id="book-promo">
-	      <div style="display: flex; justify-content: center;">
-	        <img id="book-image" src="assets/images/mybook.png" alt="My Book" />
-	      </div>
-	      <div id="book-description">
-	        <h2>My New Book</h2>
-	        <p>A personal and practical guide to navigating the chaos of modern life and business. This book blends stories, frameworks, and strategies to help you try new things and actually make them stick.</p>
-	        <a href="https://www.amazon.com/your-book-link" target="_blank">Buy on Amazon</a>
-	      </div>
-	    </section>
-	
-	    <!-- Footer -->
-	    <footer id="footer">
-	      <span class="copyright">© 2025 Daniel Stewart | All Rights Reserved.</span>
-	    </footer>
-	  </div>
-	
-	  <script>
-	    window.onload = function () {
-	      document.body.classList.remove('is-preload');
-	    }
-	    window.ontouchmove = function () { return false; }
-	    window.onorientationchange = function () { document.body.scrollTop = 0; }
-	
-	    const bookImage = document.getElementById('book-image');
-	    const bookDescription = document.getElementById('book-description');
-	
-	    window.addEventListener('scroll', () => {
-	      const scrollTop = window.scrollY;
-	      const promoTop = document.getElementById('book-promo').offsetTop;
-	      const triggerDistance = 300;
-	
-	      if (scrollTop + window.innerHeight > promoTop + triggerDistance) {
-	        bookImage.style.transform = 'translateX(0)';
-	        bookDescription.style.opacity = 1;
-	      } else {
-	        bookImage.style.transform = 'translateX(100vw)';
-	        bookDescription.style.opacity = 0;
-	      }
-	    });
-	  </script>
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Daniel Stewart</h1>
+						<p>Tech Entrepreneur &nbsp;&bull;&nbsp; Python & Machine/Deep Learning &nbsp;&bull;&nbsp; Data-Driven Investing Enthusiast</p>
+						<p>Vancouver, Canada</p>
+						<nav>
+							<ul>
+								<li><a href="blog.html" class="icon solid fa-pen"><span class="label">Blog</span></a></li>
+								<li><a href="https://www.linkedin.com/in/danthemans/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/dstew1" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:daniel.stewarrt@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.youtube.com/@explorerpreneur" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+								<li><a href="https://www.instagram.com/explorerpreneur" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; 2025 Daniel Stewart | All Rights Reserved.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
 	</body>
 </html>
