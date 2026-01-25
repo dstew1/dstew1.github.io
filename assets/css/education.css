@@ -32,10 +32,7 @@ body {
 }
 
 .timeline-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 48px;
-  position: relative;
+  margin-bottom: 32px;
 }
 
 .timeline-content {
