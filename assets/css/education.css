@@ -39,11 +39,13 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 20px 24px;
-  margin-left: 20px;
-  width: 100%;
+  padding: 22px 26px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .timeline-content:hover {
