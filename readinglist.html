@@ -158,6 +158,30 @@
       animation: fadeSlideUp 0.8s ease-out 0.2s both;
     }
 
+    .hero-headshot {
+      display: inline-block;
+      padding: 4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--amber-500), var(--amber-200), var(--amber-500));
+      background-size: 200% 200%;
+      margin: 0.2em 0 1.25em;
+      animation: ringShimmer 4s ease-in-out infinite, fadeSlideUp 0.8s ease-out 0.28s both;
+    }
+
+    .hero-headshot img {
+      display: block;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      object-fit: cover;
+    }
+
+    @keyframes ringShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
     .hero p {
       color: var(--gray-600);
       font-size: 1.05em;
@@ -395,6 +419,9 @@
         Reading Journal
       </div>
       <h1>My Reading List</h1>
+      <div class="hero-headshot">
+        <img src="assets/images/Headshot.png" alt="Daniel Stewart">
+      </div>
       <p>A yearly log of books I've read — assuming I remember to put them on here.</p>
 
       <div class="stats" aria-label="Reading list summary">
