@@ -34,50 +34,11 @@
       position: relative;
     }
 
-    .bg-glow {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
-    .bg-glow .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.35;
-      animation: orbFloat 14s ease-in-out infinite alternate;
-    }
-
-    .bg-glow .orb:nth-child(1) {
-      width: 420px;
-      height: 420px;
-      background: var(--amber-200);
-      top: -80px;
-      left: -100px;
-      animation-duration: 16s;
-    }
-
-    .bg-glow .orb:nth-child(2) {
-      width: 340px;
-      height: 340px;
-      background: var(--amber-100);
-      bottom: -60px;
-      right: -80px;
-      animation-duration: 12s;
-      animation-delay: -4s;
-    }
-
-    .bg-glow .orb:nth-child(3) {
-      width: 220px;
-      height: 220px;
-      background: var(--amber-200);
-      top: 45%;
-      left: 58%;
-      animation-duration: 18s;
-      animation-delay: -8s;
-    }
+    .bg-glow { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .bg-glow .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; animation: orbFloat 14s ease-in-out infinite alternate; }
+    .bg-glow .orb:nth-child(1) { width: 420px; height: 420px; background: var(--amber-200); top: -80px; left: -100px; animation-duration: 16s; }
+    .bg-glow .orb:nth-child(2) { width: 340px; height: 340px; background: var(--amber-100); bottom: -60px; right: -80px; animation-duration: 12s; animation-delay: -4s; }
+    .bg-glow .orb:nth-child(3) { width: 220px; height: 220px; background: var(--amber-200); top: 45%; left: 58%; animation-duration: 18s; animation-delay: -8s; }
 
     @keyframes orbFloat {
       0% { transform: translate(0, 0) scale(1); }
@@ -96,40 +57,11 @@
       background-size: 180px;
     }
 
-    .container {
-      position: relative;
-      z-index: 2;
-      width: min(100%, 900px);
-      margin: 0 auto;
-      padding: 3.5em 1.5em 3em;
-    }
-
-    .top-nav {
-      margin-bottom: 2.5em;
-      animation: fadeSlideUp 0.7s ease-out both;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--gray-600);
-      text-decoration: none;
-      font-size: 0.92em;
-      font-weight: 600;
-      transition: color 0.25s ease, transform 0.25s ease;
-    }
-
-    .back-link:hover {
-      color: var(--amber-600);
-      transform: translateX(-2px);
-    }
-
-    .hero {
-      text-align: center;
-      max-width: 740px;
-      margin: 0 auto 3em;
-    }
+    .container { position: relative; z-index: 2; width: min(100%, 900px); margin: 0 auto; padding: 3.5em 1.5em 3em; }
+    .top-nav { margin-bottom: 2.5em; animation: fadeSlideUp 0.7s ease-out both; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gray-600); text-decoration: none; font-size: 0.92em; font-weight: 600; transition: color 0.25s ease, transform 0.25s ease; }
+    .back-link:hover { color: var(--amber-600); transform: translateX(-2px); }
+    .hero { text-align: center; max-width: 740px; margin: 0 auto 3em; }
 
     .eyebrow {
       display: inline-flex;
@@ -158,76 +90,17 @@
       animation: fadeSlideUp 0.8s ease-out 0.2s both;
     }
 
-    .hero-headshot {
-      width: min(100%, 520px);
-      margin: 1.1em auto 1.45em;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1.5px solid var(--gray-200);
-      background: rgba(255, 255, 255, 0.82);
-      box-shadow: 0 18px 48px -22px rgba(17, 24, 39, 0.35), 0 12px 32px -24px rgba(245, 158, 11, 0.55);
-      animation: fadeSlideUp 0.8s ease-out 0.28s both;
-    }
-
-    .hero-headshot img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .hero p {
-      color: var(--gray-600);
-      font-size: 1.05em;
-      line-height: 1.7;
-      animation: fadeSlideUp 0.8s ease-out 0.35s both;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 560px;
-      margin: 2em auto 0;
-      animation: fadeSlideUp 0.8s ease-out 0.45s both;
-    }
-
-    .stat-card {
-      background: rgba(255, 255, 255, 0.82);
-      border: 1.5px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 16px 14px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 24px -18px rgba(17, 24, 39, 0.3);
-    }
-
-    .stat-card strong {
-      display: block;
-      color: var(--gray-900);
-      font-size: 1.35em;
-      line-height: 1;
-      margin-bottom: 5px;
-    }
-
-    .stat-card span {
-      color: var(--gray-500);
-      font-size: 0.78em;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .reading-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
+    .hero p { color: var(--gray-600); font-size: 1.05em; line-height: 1.7; animation: fadeSlideUp 0.8s ease-out 0.35s both; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 560px; margin: 2em auto 0; animation: fadeSlideUp 0.8s ease-out 0.45s both; }
+    .stat-card { background: rgba(255,255,255,0.82); border: 1.5px solid var(--gray-200); border-radius: 16px; padding: 16px 14px; text-align: center; backdrop-filter: blur(10px); box-shadow: 0 8px 24px -18px rgba(17,24,39,0.3); }
+    .stat-card strong { display: block; color: var(--gray-900); font-size: 1.35em; line-height: 1; margin-bottom: 5px; }
+    .stat-card span { color: var(--gray-500); font-size: 0.78em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .reading-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 
     .year-card {
       position: relative;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255,255,255,0.9);
       border: 1.5px solid var(--gray-200);
       border-radius: 22px;
       padding: 24px;
@@ -240,135 +113,24 @@
     .year-card:nth-child(2) { animation-delay: 0.65s; }
     .year-card:nth-child(3) { animation-delay: 0.75s; }
     .year-card:nth-child(4) { animation-delay: 0.85s; }
-
-    .year-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, var(--amber-50), transparent 62%);
-      opacity: 0;
-      transition: opacity 0.35s ease;
-    }
-
-    .year-card:hover {
-      border-color: var(--amber-500);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 46px -18px rgba(245, 158, 11, 0.35), 0 3px 12px rgba(0, 0, 0, 0.04);
-    }
-
+    .year-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--amber-50), transparent 62%); opacity: 0; transition: opacity 0.35s ease; }
+    .year-card:hover { border-color: var(--amber-500); transform: translateY(-4px); box-shadow: 0 16px 46px -18px rgba(245,158,11,0.35), 0 3px 12px rgba(0,0,0,0.04); }
     .year-card:hover::before { opacity: 1; }
+    .year-header, .book-list { position: relative; z-index: 1; }
+    .year-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--gray-200); }
+    .year-label { display: flex; align-items: center; gap: 12px; }
+    .book-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 14px; background: var(--amber-50); color: var(--amber-500); display: flex; align-items: center; justify-content: center; }
+    .year-label h2 { color: var(--gray-900); font-size: 1.45em; letter-spacing: -0.03em; line-height: 1; }
+    .year-label span { color: var(--gray-500); font-size: 0.84em; font-weight: 500; }
+    .book-count { color: var(--amber-600); background: var(--amber-50); border: 1px solid var(--amber-100); border-radius: 999px; padding: 7px 10px; font-size: 0.78em; font-weight: 700; white-space: nowrap; }
+    .book-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .book-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--gray-700, #374151); font-size: 0.96em; line-height: 1.45; }
+    .book-list li::before { content: ''; flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: var(--amber-500); margin-top: 0.58em; box-shadow: 0 0 0 4px var(--amber-50); }
+    .footer { text-align: center; margin-top: 3.2em; animation: fadeSlideUp 0.7s ease-out 1s both; }
+    .footer p { font-size: 0.82em; color: var(--gray-600); opacity: 0.65; }
+    .amber-dot { display: inline-block; width: 5px; height: 5px; background: var(--amber-500); border-radius: 50%; margin: 0 6px; vertical-align: middle; }
 
-    .year-header,
-    .book-list {
-      position: relative;
-      z-index: 1;
-    }
-
-    .year-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding-bottom: 16px;
-      margin-bottom: 16px;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .year-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .book-icon {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: var(--amber-50);
-      color: var(--amber-500);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .year-label h2 {
-      color: var(--gray-900);
-      font-size: 1.45em;
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-
-    .year-label span {
-      color: var(--gray-500);
-      font-size: 0.84em;
-      font-weight: 500;
-    }
-
-    .book-count {
-      color: var(--amber-600);
-      background: var(--amber-50);
-      border: 1px solid var(--amber-100);
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-size: 0.78em;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .book-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .book-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: var(--gray-700, #374151);
-      font-size: 0.96em;
-      line-height: 1.45;
-    }
-
-    .book-list li::before {
-      content: '';
-      flex: 0 0 auto;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--amber-500);
-      margin-top: 0.58em;
-      box-shadow: 0 0 0 4px var(--amber-50);
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 3.2em;
-      animation: fadeSlideUp 0.7s ease-out 1s both;
-    }
-
-    .footer p {
-      font-size: 0.82em;
-      color: var(--gray-600);
-      opacity: 0.65;
-    }
-
-    .amber-dot {
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      background: var(--amber-500);
-      border-radius: 50%;
-      margin: 0 6px;
-      vertical-align: middle;
-    }
-
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 760px) {
       .container { padding: 2.5em 1.2em 2.5em; }
@@ -377,27 +139,17 @@
       .stats { grid-template-columns: 1fr; }
       .reading-grid { grid-template-columns: 1fr; }
       .year-card { padding: 20px; border-radius: 18px; }
-      .hero-headshot { width: min(100%, 440px); border-radius: 22px; }
     }
 
     @media (max-width: 420px) {
-      .year-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-      }
-
+      .year-header { align-items: flex-start; flex-direction: column; gap: 12px; }
       .book-count { align-self: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <div class="bg-glow">
-    <div class="orb"></div>
-    <div class="orb"></div>
-    <div class="orb"></div>
-  </div>
+  <div class="bg-glow"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
   <div class="grain"></div>
 
   <main class="container">
@@ -414,41 +166,18 @@
         Reading Journal
       </div>
       <h1>My Reading List</h1>
-      <div class="hero-headshot">
-        <img src="assets/images/Headshot.png" alt="Daniel Stewart">
-      </div>
       <p>A yearly log of books I've read — assuming I remember to put them on here. I've definitely forgotten about some, but I'm under the impression that they don't deserve to be on the list if I forget them.</p>
 
       <div class="stats" aria-label="Reading list summary">
-        <div class="stat-card">
-          <strong data-stat="total-books">0</strong>
-          <span>Total books</span>
-        </div>
-        <div class="stat-card">
-          <strong data-stat="years-logged">0</strong>
-          <span>Years logged</span>
-        </div>
-        <div class="stat-card">
-          <strong data-stat="current-shelf">—</strong>
-          <span>Current shelf</span>
-        </div>
+        <div class="stat-card"><strong data-stat="total-books">0</strong><span>Total books</span></div>
+        <div class="stat-card"><strong data-stat="years-logged">0</strong><span>Years logged</span></div>
+        <div class="stat-card"><strong data-stat="current-shelf">—</strong><span>Current shelf</span></div>
       </div>
     </section>
 
     <section class="reading-grid" aria-label="Books by year">
       <article class="year-card">
-        <div class="year-header">
-          <div class="year-label">
-            <div class="book-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-            </div>
-            <div>
-              <h2>2026</h2>
-              <span>Books</span>
-            </div>
-          </div>
-          <div class="book-count">0 books</div>
-        </div>
+        <div class="year-header"><div class="year-label"><div class="book-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg></div><div><h2>2026</h2><span>Books</span></div></div><div class="book-count">0 books</div></div>
         <ul class="book-list">
           <li>On Writing: A Memoir of the Craft — Stephen King</li>
           <li>Islands In The Sky</li>
@@ -462,18 +191,7 @@
       </article>
 
       <article class="year-card">
-        <div class="year-header">
-          <div class="year-label">
-            <div class="book-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-            </div>
-            <div>
-              <h2>2025</h2>
-              <span>Books</span>
-            </div>
-          </div>
-          <div class="book-count">0 books</div>
-        </div>
+        <div class="year-header"><div class="year-label"><div class="book-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg></div><div><h2>2025</h2><span>Books</span></div></div><div class="book-count">0 books</div></div>
         <ul class="book-list">
           <li>Psychology of Money</li>
           <li>The Lords of Easy Money</li>
@@ -488,18 +206,7 @@
       </article>
 
       <article class="year-card">
-        <div class="year-header">
-          <div class="year-label">
-            <div class="book-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-            </div>
-            <div>
-              <h2>2024</h2>
-              <span>Books</span>
-            </div>
-          </div>
-          <div class="book-count">0 books</div>
-        </div>
+        <div class="year-header"><div class="year-label"><div class="book-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg></div><div><h2>2024</h2><span>Books</span></div></div><div class="book-count">0 books</div></div>
         <ul class="book-list">
           <li>4 Hour Work Week</li>
           <li>A Brief History of Time</li>
@@ -514,18 +221,7 @@
       </article>
 
       <article class="year-card">
-        <div class="year-header">
-          <div class="year-label">
-            <div class="book-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-            </div>
-            <div>
-              <h2>2023</h2>
-              <span>Books</span>
-            </div>
-          </div>
-          <div class="book-count">0 books</div>
-        </div>
+        <div class="year-header"><div class="year-label"><div class="book-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg></div><div><h2>2023</h2><span>Books</span></div></div><div class="book-count">0 books</div></div>
         <ul class="book-list">
           <li>Influence</li>
           <li>Expert Secrets</li>
@@ -539,9 +235,7 @@
       </article>
     </section>
 
-    <footer class="footer">
-      <p>&copy; 2026 Daniel Stewart <span class="amber-dot"></span> Explorerpreneur</p>
-    </footer>
+    <footer class="footer"><p>&copy; 2026 Daniel Stewart <span class="amber-dot"></span> Explorerpreneur</p></footer>
   </main>
 
   <script>
@@ -549,13 +243,8 @@
       const yearCards = Array.from(document.querySelectorAll('.year-card'));
       const bookLists = Array.from(document.querySelectorAll('.book-list'));
       const totalBooks = bookLists.reduce((total, list) => total + list.querySelectorAll('li').length, 0);
-      const years = yearCards
-        .map(card => card.querySelector('.year-label h2')?.textContent.trim())
-        .filter(Boolean);
-      const currentShelf = years
-        .map(Number)
-        .filter(Number.isFinite)
-        .sort((a, b) => b - a)[0] || years[0] || '—';
+      const years = yearCards.map(card => card.querySelector('.year-label h2')?.textContent.trim()).filter(Boolean);
+      const currentShelf = years.map(Number).filter(Number.isFinite).sort((a, b) => b - a)[0] || years[0] || '—';
 
       const totalBooksEl = document.querySelector('[data-stat="total-books"]');
       const yearsLoggedEl = document.querySelector('[data-stat="years-logged"]');
