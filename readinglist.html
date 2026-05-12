@@ -414,20 +414,22 @@
         Reading Journal
       </div>
       <h1>My Reading List</h1>
+      <div class="hero-headshot">
+        <img src="assets/images/Headshot.png" alt="Daniel Stewart">
       </div>
       <p>A yearly log of books I've read — assuming I remember to put them on here.</p>
 
       <div class="stats" aria-label="Reading list summary">
         <div class="stat-card">
-          <strong>32</strong>
+          <strong data-stat="total-books">0</strong>
           <span>Total books</span>
         </div>
         <div class="stat-card">
-          <strong>4</strong>
+          <strong data-stat="years-logged">0</strong>
           <span>Years logged</span>
         </div>
         <div class="stat-card">
-          <strong>2026</strong>
+          <strong data-stat="current-shelf">—</strong>
           <span>Current shelf</span>
         </div>
       </div>
@@ -445,7 +447,7 @@
               <span>Books</span>
             </div>
           </div>
-          <div class="book-count">7 books</div>
+          <div class="book-count">0 books</div>
         </div>
         <ul class="book-list">
           <li>On Writing: A Memoir of the Craft — Stephen King</li>
@@ -470,7 +472,7 @@
               <span>Books</span>
             </div>
           </div>
-          <div class="book-count">8 books</div>
+          <div class="book-count">0 books</div>
         </div>
         <ul class="book-list">
           <li>Psychology of Money</li>
@@ -496,7 +498,7 @@
               <span>Books</span>
             </div>
           </div>
-          <div class="book-count">9 books</div>
+          <div class="book-count">0 books</div>
         </div>
         <ul class="book-list">
           <li>4 Hour Work Week</li>
@@ -522,7 +524,7 @@
               <span>Books</span>
             </div>
           </div>
-          <div class="book-count">8 books</div>
+          <div class="book-count">0 books</div>
         </div>
         <ul class="book-list">
           <li>Influence</li>
@@ -542,5 +544,35 @@
     </footer>
   </main>
 
+  <script>
+    function updateReadingStats() {
+      const yearCards = Array.from(document.querySelectorAll('.year-card'));
+      const bookLists = Array.from(document.querySelectorAll('.book-list'));
+      const totalBooks = bookLists.reduce((total, list) => total + list.querySelectorAll('li').length, 0);
+      const years = yearCards
+        .map(card => card.querySelector('.year-label h2')?.textContent.trim())
+        .filter(Boolean);
+      const currentShelf = years
+        .map(Number)
+        .filter(Number.isFinite)
+        .sort((a, b) => b - a)[0] || years[0] || '—';
+
+      const totalBooksEl = document.querySelector('[data-stat="total-books"]');
+      const yearsLoggedEl = document.querySelector('[data-stat="years-logged"]');
+      const currentShelfEl = document.querySelector('[data-stat="current-shelf"]');
+
+      if (totalBooksEl) totalBooksEl.textContent = totalBooks;
+      if (yearsLoggedEl) yearsLoggedEl.textContent = years.length;
+      if (currentShelfEl) currentShelfEl.textContent = currentShelf;
+
+      yearCards.forEach(card => {
+        const count = card.querySelectorAll('.book-list li').length;
+        const countEl = card.querySelector('.book-count');
+        if (countEl) countEl.textContent = `${count} ${count === 1 ? 'book' : 'books'}`;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', updateReadingStats);
+  </script>
 </body>
 </html>
