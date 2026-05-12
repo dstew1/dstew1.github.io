@@ -127,7 +127,7 @@
 
     .hero {
       text-align: center;
-      max-width: 680px;
+      max-width: 740px;
       margin: 0 auto 3em;
     }
 
@@ -159,27 +159,21 @@
     }
 
     .hero-headshot {
-      display: inline-block;
-      padding: 4px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--amber-500), var(--amber-200), var(--amber-500));
-      background-size: 200% 200%;
-      margin: 0.2em 0 1.25em;
-      animation: ringShimmer 4s ease-in-out infinite, fadeSlideUp 0.8s ease-out 0.28s both;
+      width: min(100%, 520px);
+      margin: 1.1em auto 1.45em;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1.5px solid var(--gray-200);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 18px 48px -22px rgba(17, 24, 39, 0.35), 0 12px 32px -24px rgba(245, 158, 11, 0.55);
+      animation: fadeSlideUp 0.8s ease-out 0.28s both;
     }
 
     .hero-headshot img {
       display: block;
-      width: 104px;
-      height: 104px;
-      border-radius: 50%;
-      border: 3px solid var(--white);
+      width: 100%;
+      height: auto;
       object-fit: cover;
-    }
-
-    @keyframes ringShimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
     }
 
     .hero p {
@@ -383,6 +377,7 @@
       .stats { grid-template-columns: 1fr; }
       .reading-grid { grid-template-columns: 1fr; }
       .year-card { padding: 20px; border-radius: 18px; }
+      .hero-headshot { width: min(100%, 440px); border-radius: 22px; }
     }
 
     @media (max-width: 420px) {
