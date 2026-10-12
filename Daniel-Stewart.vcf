@@ -1,0 +1,24 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Stewart;Daniel;;;
+FN:Daniel Stewart
+ORG:Explorerpreneur
+TITLE:Writer · Builder · Investor
+TEL;TYPE=CELL,VOICE:+13435527378
+EMAIL;TYPE=INTERNET,PREF:daniel.stewarrt@gmail.com
+ADR;TYPE=WORK:;;;Vancouver;BC;;Canada
+item1.URL:https://www.youtube.com/@explorerpreneur
+item1.X-ABLabel:YouTube
+X-SOCIALPROFILE;TYPE=youtube:https://www.youtube.com/@explorerpreneur
+item2.URL:https://www.instagram.com/explorerpreneur
+item2.X-ABLabel:Instagram
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/explorerpreneur
+item3.URL:https://www.linkedin.com/in/danthemans
+item3.X-ABLabel:LinkedIn
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/danthemans
+item4.URL:https://www.amazon.com/stores/Daniel-Stewart/author/B0DTB5F4YY
+item4.X-ABLabel:Trying New Things
+item5.URL:https://www.goldsilverportfolio.com/
+item5.X-ABLabel:Gold & Silver Portfolio
+NOTE:Met via my NFC card. Writer\, builder\, investor. Author of Trying New Things.
+END:VCARD
