@@ -411,14 +411,29 @@ if (location.protocol === "file:") {
   save.download = `${CONTACT.firstName}-${CONTACT.lastName}.vcf`;
 }
 
-/* Android downloads contact files instead of opening them, so say so up front. */
+/* Android: try to open the phone's own "Create contact" screen, prefilled.
+   If Chrome won't allow it, it falls back to downloading the contact file.
+   That screen only accepts name, phone, email, company, title and notes,
+   so the social links ride along in the notes. */
 const isAndroid = /Android/i.test(navigator.userAgent);
-if (isAndroid) {
+if (isAndroid && location.protocol !== "file:") {
+  const enc = encodeURIComponent;
+  const notes = [CONTACT.note, ...liveSocials.map(s => `${s.label}: ${s.url}`)].filter(Boolean).join("\n");
+  const fallback = new URL("Daniel-Stewart.vcf", location.href).href;
+  const extras = [
+    ["S.name", fullName],
+    ["S.phone", telHref],
+    ["i.phone_type", "2"],
+    ["S.email", CONTACT.email],
+    ["S.company", CONTACT.org],
+    ["S.job_title", CONTACT.title],
+    ["S.notes", notes],
+    ["S.browser_fallback_url", fallback]
+  ].filter(([, v]) => v).map(([k, v]) => `${k}=${enc(v)}`).join(";");
+  save.href = `intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/raw_contact;${extras};end`;
+  save.removeAttribute("download");
   document.querySelector(".save-note").textContent =
-    "Your phone will download a contact file. Tap it to add me to Contacts.";
-  save.addEventListener("click", () => {
-    setTimeout(() => toast("Tap the download to add me to Contacts"), 600);
-  });
+    "Adds me to your contacts. If a file downloads instead, tap it to finish.";
 }
 
 /* Toast */
